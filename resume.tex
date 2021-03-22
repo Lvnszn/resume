@@ -1,0 +1,139 @@
+% !TEX TS-program = xelatex
+% !TEX encoding = UTF-8 Unicode
+% !Mode:: "TeX:UTF-8"
+
+\documentclass{resume}
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{cite}
+
+\begin{document}
+
+\pagenumbering{gobble} % suppress displaying page number
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+        \textbf{\Large 彭笳鑫}  & \textbf{\Large 简历}\\
+        \faPhone ~ +86 18036086690 & \url{@Lvnszn}~\href{https://github.com/Lvnszn}{\faGithub}\\
+        \faEnvelope ~ \href{mailto:lvs.pjx@gmail.com}{lvs.pjx@gmail.com} / \href{mailto:18036086690@163.com}{18036086690@163.com} &
+        \faWechat ~ jax\_110
+        \\
+        \faCommenting ~ \href{https://www.notion.so/Faster-Smaller-Better-2e2efc7651254e19a762e229c26dde69}{技术博客} &
+        \sffamily Last update: \today                            \\
+    \end{tabular*}
+
+
+\section{\faSteam\ 工作经历}
+\datedsubsection{\textbf{杭州帷幄匠心科技有限公司}}{2018年11月 -- 至今}
+\datedsubsection{\textit{数据基础部门}}{Golang/Python开发}
+\begin{itemize}
+  \item 负责搭建离线清洗平台，用了抽象分层的方法设计总体表结构，优化数据指标逻辑和数据指标的展示的逻辑可靠性，可用性和实时性
+  \item 负责搭建编写数据查询平台，优化查询速度，引入新型技术来提升用户体验和用于支持不同的数据指标的展示方式（PC端，小程序端，直播大屏）
+  \item 负责搭建数据质量管理，数据过滤和协助搭建指标管理平台，用于保障数据指标的稳定性
+  \item 负责搭建监控报警系统，用于监控指标的正确性，准确性和可靠性，计划引入自动化测试，实现整体流程的畅通
+  \item 作为项目POC负责项目整体方向的把控，上线项目风险的把控和兜底处理一些不可控的风险来防止block住CSM或者BD的项目计划，收集不同用户的反馈来持续优化现有服务
+\end{itemize}
+
+\datedsubsection{\textbf{苏州承泽医疗科技有限公司}}{2018年8月 -- 2018年11月}
+\datedsubsection{\textit{数据基础部门}}{数据挖掘/Python开发}
+\begin{itemize}
+  \item 负责构建机器学习项目，对指标和变量进行了设计，通过比对历史数据和预测数据给出有效的经营决策建议并推动变现
+\end{itemize}
+
+\datedsubsection{\textbf{苏州同程网络科技有限公司}}{2017年5月 -- 2018年8月}
+\datedsubsection{\textit{经营管理部}}{数据挖掘/Java/Python开发}
+\begin{itemize}
+  \item 负责公司机票事业群业务团队的数据挖掘支持，对潜在的业务增长点深入分析与挖掘，分析国内国际的会员的不同增值产品和主营产品，给出有效的建议，分析国内国际的营收数据，提出新的营收增长点。从数据的角度推动运营决策、产品方向、服务体验以及业务经营指标的提升
+  \item 负责分析、数据挖掘与建模以及数据类研发项目的推进与对接，善于从日常的数据指标中发现存在的问题，找到解决方案并主动推进解
+  \item 利用线上海量数据并结合用户分析、用户调研、竞品分析，数据挖掘等方法，提取有效信息辅助决策
+  \item 负责对接不同业务组的数据挖掘需求，梳理数据挖掘的需求，并且给出有效建议和方案，并且将数据挖掘产品落地变现
+\end{itemize}
+
+\datedsubsection{\textbf{国云科技有限公司}}{2016年4月 -- 2017年5月}
+\datedsubsection{\textit{数据基础部门}}{Java/Python开发}
+\begin{itemize}
+  \item 优化数据解决方案pipeline，单独负责设计数据挖掘后端架构和开发数据挖掘模块的功能
+\end{itemize}
+
+\datedsubsection{\textbf{苏州艺能软件公司}}{2015年4月 -- 2016年4月}
+\datedsubsection{\textit{CRM}}{Java开发}
+\begin{itemize}
+  \item 负责EA游戏的数据支撑，包含数据调取、数据分析等内容，并针对不同游戏会员业务增长点进行分析，给出有效的建议
+\end{itemize}
+
+
+
+\section{\faUsers\ 项目经历}
+\datedsubsection{\textbf{帷幄匠心科技-数据分析中台}}{2018年11月 -- 至今}
+\role{技术栈：Airflow，MQTT，Go，gRPC，Python，Pandas，PostgreSQL，Redis，Kafka，Druid和ClickHouse}
+
+主要负责数据平台的开发，涉及IOT相关的数据接入，数据指标清洗，搭建T+1、小时和实时级别清洗平台，编写指标查询平台和数据写入pipeline，完成E2E的数据分析平台，负责参与并设计数据表分层，初期独立开发数据指标和数据指标的测试用例
+\begin{itemize}
+  \item 解决了由于MQTT单个consumer的性能瓶颈问题导致导致经常报警的问题
+  \item 从零搭建清洗平台，目前支持100+数据源，1000+指标维度的写入和查询，亲自经历从0写入量到日写入量2000W条的成长
+  \item 持续优化TP数据库查询，后续引入AP数据库，经历过3次数据迁移
+  \item 持续优化清洗脚本逻辑，保证数据从生产到展示的链路畅通，降低异常情况导致的数据问题
+  \item 解决数据分布不均衡和需要关联不同的维度指标导致查询过慢的问题，性能从p99 s提升到p99 100ms以内，QPM200左右
+  \item E2E培训不同组的人员引入Infra相关SDK,服务等数据
+  \item 提供数据质量保证，搭建业务层，服务层等数据报警功能，减少客户Oncall次数
+  \item 服务于若干500强企业
+\end{itemize}
+
+\datedsubsection{\textbf{同程旅游-流失预警系统}}{2018年1月 -- 2018年4月}
+\role{技术栈：Java，Python}
+
+基于用户流失行为不一，通过分析数据将流失问题转化成可预测的问题，利用算法和挖掘的手段，每日都预测出会流失的用户，对他们进行营销等级划分
+\begin{itemize}
+  \item 上线后的ROI效果提升了一倍
+  \item 基于用户行为的历史数据，清洗出不同用户的相关特征指标，沉淀给不同的业务方使用
+\end{itemize}
+
+\datedsubsection{\textbf{同程旅游-航司推荐}}{2018年4月 -- 2018年7月}
+\role{技术栈：Java，Python}
+
+通过数据分析不同群体的订票习惯，分析用户购买的行为，计算不同航司的购买占比以及用户的近期购买行为的转变，设定了个指标给用户呈现不同的航司服务
+\begin{itemize}
+  \item 带来了1\%的转化率提升
+\end{itemize}
+
+\datedsubsection{\textbf{同程旅游-预测业务量监控系统}}{2017年11月 -- 2018年1月}
+\role{技术栈：Java，Python}
+
+通过自动分析每日不同业务的数据，通过构造合理的指标和报警机制，计算不同小时的预测业务量，将两者对比，设定阈值自动报警，在深夜的时候服务器崩溃的时候多次报警，及时将损失降到最低，获得公司内部评比2等奖
+\begin{itemize}
+  \item 帮助机票根据预测的趋势做对应的营销活动，完成了2次里程碑
+\end{itemize}
+
+
+\section{\faHeartO\ 获奖情况}
+\datedline{\textit{第二名}， \href{https://pingcap.com/community-cn/high-performance-tidb-challenge/}{PingCap High Performance Challenge}}{2020 年}
+\datedline{\textit{第三名}，\href{https://www.datafountain.cn/competitions/466/ranking?isRedance=0&sch=1721&stage=B}{路况状态时空预测}}{2020 年}
+\datedline{\textit{第一名}， \href{http://mobile.sanhaostreet.com/keji/201910/173429.html}{联合利华黑客马拉松线下零售门店的覆盖}}{2019 年}
+\datedline{\textit{第三名}， \href{http://www.sip-gjn.com/News/1779Detail.shtml}{苏州工业园区人工智能大赛}}{2017 年}
+\datedline{\textit{第十一名}，{基于人工智能的药物分子大赛}}{2016 年}
+
+
+
+\section{\faHeart\ 开源贡献}
+\datedline{\href{https://github.com/pingcap/tidb}{TIDB} (27.2K+ stars): 贡献者}{2020 年}
+
+\section{\faGraduationCap\  教育背景}
+\datedsubsection{\textbf{苏州科技大学-天平学院}}{2011 -- 2015}
+\datedsubsection{\textit{学士}} {计算机科学与技术}
+
+\section{\faInfo\ 其他}
+% increase linespacing [parsep=0.5ex]
+\begin{itemize}[parsep=0.5ex]
+  \item 熟练Linux编程，熟练Go，PostgreSQL，gRPC，Git，常见设计模式
+  \item 熟练掌握SQL能够独立获取数据，有一定的SQL调优经验
+  \item 了解Docker，Druid，InfluxDB，Hive，Clickhouse，Kafka，Redis等组件常见使用方法
+  \item 熟悉Python，Sklearn，Pandas，Airflow能够进行数据获取、数据清洗、特征工程、机器学习、数据建模等
+  \item 拥有系统化的软件开发，数据分析的知识体系与方法，拥有海量数据数据分析经验，能够深入理解业务，发现业务特征潜在机会，并给出有效的行动建议并推动
+  \item 竞赛爱好者：喜欢探索新的技术和解决方案来处理不同的问题，获取获得过一些不错的名次
+  \item 技术爱好者：喜欢闲暇时间阅读大型开源的源码和设计，并且有给超过几千star的项目提供过代码
+\end{itemize}
+
+%% Reference
+%\newpage
+%\bibliographystyle{IEEETran}
+%\bibliography{mycite}
+\end{document}
